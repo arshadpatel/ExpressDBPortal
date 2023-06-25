@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const port = process.env.PORT || 3000;
 //for dynamic pages
 const { engine } = require('express-handlebars');
 app.engine('handlebars', engine({ extname: '.handlebars', defaultLayout: "main" }));
@@ -89,4 +89,6 @@ app.get('/admin', (req, res) => {
 });
 
 
-app.listen(4500);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
