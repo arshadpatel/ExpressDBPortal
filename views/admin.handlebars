@@ -1,0 +1,30 @@
+<h1>Data Display</h1>
+<table>
+    <tr class="header-row">
+        <th>Item/Customer</th>
+        <th>Customer1</th>
+        <th>Customer2</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <th class="first-column">Quantity</th>
+        {{#each data}}
+        <td>{{this.quantity}}</td>
+        {{/each}}
+        <td>{{quantity}}</td>
+    </tr>
+    <tr>
+        <th class="first-column">Weight</th>
+        {{#each data}}
+        <td>{{this.weight}}</td>
+        {{/each}}
+        <td>{{weight}}</td>
+    </tr>
+    <tr>
+        <th class="first-column">Box Count</th>
+        {{#each data}}
+        <td>{{this.box_count}}</td>
+        {{/each}}
+        <td>{{box_count}}</td>
+    </tr>
+</table>

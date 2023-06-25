@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Order Details</h1>
+  <form action="/customer" method="post" onclick="validateForm()">
+    <div class="form-group">
+      <label for="order-date">Order Date:</label>
+      <input type="date" name="date" id="order-date" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company:</label>
+      <input type="text" name="company" id="company" required>
+    </div>
+    <div class="form-group">
+      <label for="owner">Owner:</label>
+      <input type="text" name="owner" id="owner" required>
+    </div>
+    <div class="form-group">
+      <label for="item">Item:</label>
+      <input type="text" name="item" id="item" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" name="quantity" id="quantity" required>
+    </div>
+    <div class="form-group">
+      <label for="weight">Weight:</label>
+      <input type="text" name="weight" id="weight" required>
+    </div>
+    <div class="form-group">
+      <label for="request-shipment">Request for Shipment:</label>
+      <input type="text" name="req_for_shipment" id="request-shipment" required>
+    </div>
+    <div class="form-group">
+      <label for="tracking-id">Tracking ID:</label>
+      <input type="text" name="trackingid" id="tracking-id" required>
+    </div>
+    <div class="form-group">
+      <label for="shipment-size">Shipment Size:</label>
+      <input type="text" name="shipment_size" id="shipment-size" required>
+    </div>
+    <div class="form-group">
+      <label for="box-count">Box Count:</label>
+      <input type="number" name="box_count" id="box-count" required>
+    </div>
+    <div class="form-group">
+      <label for="specifications">Specifications:</label>
+      <textarea name="specifications" id="specifications" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="checklist-quantity">Checklist Quantity:</label>
+      <input type="number" name="checklist_quantity" id="checklist-quantity" required>
+    </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+    {{#if message}}
+    <p>{{message}}</p>
+    {{/if}}
+  </form>
+</div>
