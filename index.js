@@ -26,10 +26,7 @@ const connection = mysql.createConnection({
     database: "juhosi"
 });
 connection.connect((error) => {
-    if (error){
-        console.error('Error connecting to the database:', error);
-        res.status(500).send('Internal Server Error');
-    } 
+    if (error) console.error('Error connecting to the database:', error);
     else console.log("db connnected");
 });
 
