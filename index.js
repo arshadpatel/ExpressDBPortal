@@ -3,8 +3,9 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3000;
 //for dynamic pages
-const { engine } = require('express-handlebars');
-app.engine('handlebars', engine({ extname: '.handlebars', defaultLayout: "main" }));
+const exphbs = require('express-handlebars');
+// const engine = exphbs.create({ extname: '.handlebars', defaultLayout: 'main' });
+app.engine('.handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 //for post methods to get data from forms
