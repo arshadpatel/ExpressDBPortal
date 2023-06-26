@@ -4,7 +4,6 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 //for dynamic pages
 const exphbs = require('express-handlebars');
-// const engine = exphbs.create({ extname: '.handlebars', defaultLayout: 'main' });
 app.engine('.handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
